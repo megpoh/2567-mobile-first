@@ -33,12 +33,132 @@
 	-ms-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	font: 16px 'Roboto', sans-serif;
+	color: #a7a9ac;
 } 
 
 /*--------------------------------------------------------------
+>>> TYPOGRAPHY:
+----------------------------------------------------------------*/
+
+p {
+	font-size: 1rem;
+}
+
+/*1.1 - Headings*/
+
+h2 {
+	font-weight: 700;
+	font-size: 3rem;
+	text-transform: uppercase;
+	margin: 0 0 50px;
+}
+
+h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+h3+p {
+	margin-top: 10px;
+}
+
+h3:nth-child(2), h3:last-child
+
+#home p, #home p+ul li, #home p+ul li a {
+	list-style: none;
+	display: inline;
+}
+
+#about, #home {
+	color: #fff;
+}
+
+#home p:first-child {
+	font-size: 2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+#home p:nth-child(2) {
+	font-size: 1.5rem;
+}
+
+
+
+/*1.1 - Body Copy*/
+
+
+/*1.1 - Buttons*/
+
+#home p+ul li a {
+	text-decoration: none;
+}
+
+#home p+ul li a {
+	background-color: #272844;
+	padding: 15px 30px;
+}
+
+#home p+ul li a:hover {
+	color: #c4e3e2;
+}
+
+#home p+ul li:nth-child(2) a {
+	padding: 15px 43px;
+}
+
+/*1.4 - Lists*/
+#home p+ul li {
+	padding-right: 25px;
+}
+
+#home p+ul {
+	padding-top: 25px;
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+>>> 2.0 NAVIGATION MENUS:
+----------------------------------------------------------------*/
+/*2.1 - Main*/
+
+nav ul, footer ul {
+	list-style: none;
+	margin-top: 25px;
+	text-align: right;
+}
+
+nav ul li, footer ul li {
+	display: inline;
+	padding-right: 25px;
+	text-transform: uppercase;
+}
+
+nav ul li a, footer ul li a {
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #c4e3e2;
+}
+
+
+
+
+
+/*2.2 - Sub*/
+/*2.3 - Footer*/
+
+
+
+
+/*--------------------------------------------------------------
 >>> CONTENTS:
-----------------------------------------------------------------
-3.1 - Site Structure*/
+----------------------------------------------------------------*/
+/*3.1 - Site Structure*/
 .wrapper {
 	width: 75%;
 	margin: 0 auto;
@@ -51,6 +171,17 @@
 	clear: both;
 }
 
+.bg-lght-blue {
+	background-color: #c4e3e2;
+} 
+
+#work, #about, footer {
+	padding: 100px 0;
+}
+
+h1, ul {
+	margin-bottom: 0;
+}
 
 
 /*BELOW NECESSARY FOR EVERY SITE FOLLOWING*/
@@ -59,6 +190,10 @@
 	padding: 0 10px 20px 10px;
 }
 
+[class*='col-sm'] {
+	float: none;
+	padding: 0;
+}
 /*^^^^^^^^ABOVE NECESSARY FOR EVERY SITE FOLLOWING*/
 
 
@@ -174,6 +309,30 @@
 	width: 58.31%;
 }
 
+.center-block {
+	margin: 0 auto;
+	text-align: center;
+	float: none;
+}
+
+#bg-image {
+	background: url(../img/header-bg-table-and-plants.jpg) no-repeat scroll center;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+    padding: 300px 0 60px;	
+	margin: 0;
+	width: 100%;
+}
+
+#home .col-3-4 {
+	
+}
+
+
+
 
 /*--------------------------------------------------------------
 4.0 - Media 
@@ -192,6 +351,31 @@ img {
 	max-width: 100%;
 }
 
+#work ul {
+	list-style: none;
+}
+
+#work li {
+	padding-right: 30px;
+}
+
+#work li a {
+	width: 25px;
+	height: 25px;
+}
+
+#work section ul li:first-child a {
+	background: url(../img/icon-fb.png)
+}
+
+#work section ul li:last-child a {
+	background: url(../img/icon-twitter.png)
+}
+
+#work li a:hover {
+	background-position: 0 -25px;
+}
+
 
 /*--------------------------------------------------------------
 >>> 6.0 RESPONSIVE/MEDIA QUERIES:
@@ -203,6 +387,12 @@ img {
 		width: 98%
 	}
 	
+	[class*='col-sm-'] {
+		float: left;
+		padding: 0 10px 20px 10px;
+	}
+
+	
 	.col-3-4 {
 		width: 75%;
 	}
@@ -211,11 +401,11 @@ img {
 		width: 33.33%;
 	}
 	
-	.col-5-6 {
+	.col-5-6, .col-sm-2-3 {
 		width: 66.66%;
 	}
 	
-	.col-1-7, .col-1-12 {
+	.col-1-7, .col-1-12, .col-1-4 {
 		width: 100%;
 	}
 	
@@ -226,6 +416,11 @@ img {
 	.col-1-10 {
 		width: 50%;
 	}
+	
+	.col-sm-1-3 {
+		width: 33.33%;
+	}
+	
 	
 } 
 
